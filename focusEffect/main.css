@@ -1,0 +1,40 @@
+body {
+    font-family: SF mono;
+}
+.form-field {
+    margin-top: 300px;
+    margin-left: 400px;
+}
+.form-input {
+    padding: 20px;
+    border: 2px solid lightcoral;
+    border-radius: 5px;
+    width: 700px;
+    transition: .25s ease;
+}
+.form-input:focus {
+    border-color: blue;
+
+}
+.form-field {
+    position: relative;
+}
+.form-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 21px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+    color: #888;
+    transition: .25s ease;
+}
+.form-input:not(:placeholder-shown) + .form-label,
+.form-input:focus + .form-label {
+    color: #000;
+    top: 0;
+    padding: 10px;
+    display: inline-block;
+    background-color: #fff;
+}
